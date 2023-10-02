@@ -1,25 +1,20 @@
 terraform {
   required_providers {
-    data_bricks = {
-        source = "databrickslabs/databricks"
-        version = "0.3.1"
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.75.0"  
+    }
+    databricks = {
+      source = "databricks/databricks"
+      version = "1.0.0" 
     }
   }
 }
 
-provider "databricks" {
-    azure_workspace_resource_id = azure_databricks_workspace.workspace.id
-    azure_client_id = "2c754c8a-3971-4c72-892f-e6c4eb0eb67c"
-    azure_clinet_secret = "LXJ8Q~8xiratJFMrdDnJ-WzfIRbI6cPMdGfZCaXr"
-    azure_tenant_id = "20daed00-4d24-4bb4-9072-54966122bed5"
-}
-
-
-provider "azurerm" { 
-    features {}
-    client_id = "2c754c8a-3971-4c72-892f-e6c4eb0eb67c"
-    clinet_secret = "LXJ8Q~8xiratJFMrdDnJ-WzfIRbI6cPMdGfZCaXr"
-    tenant_id = "20daed00-4d24-4bb4-9072-54966122bed5"
-    subscription_id = "bbf05370-7c0e-4f8c-a2c5-c51ead4d008f"
-
+provider "azurerm" {
+  features {}
+  client_id       = "c1cd6156-8e0b-4ed1-b2fa-d3e7fae3919a"
+  client_secret   = "sek8Q~dDXuChQRvBdqigMjcaiLgP6dRzgFn55bNx"
+  tenant_id       = "1e8647b3-1bcf-4d17-9721-28853cbe413f"
+  subscription_id = "77b45418-7fb5-4763-bc5c-fa8dccc10889"
 }
